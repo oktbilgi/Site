@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Afyon’da hizmet veren Uzman Klinik Psikolog Ramazan Arslan. Bireysel terapi, çift terapisi ve online danışmanlık.">
+    <meta name="google-site-verification" content="_wwoWAJcoHQuzPfgHsQz1sDwDM9hi5ByuEHHkf_84_g" />
+    <title>Afyon Psikolog Ramazan Arslan | Uzman Klinik Psikolog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5JTEM5ESG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V5JTEM5ESG');
+</script>
+<body class="min-h-screen">
+    <!-- Floating Therapy Particles -->
+    <div id="particles-container"></div>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: white;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        .dark {
+            --bg-color: #1a1a2e;
+            --text-color: #f0f0f0;
+            --card-bg: #16213e;
+            --dark-heading-color: #b8c1ec; /* New variable for dark mode headings */
+        }
+
+        .dark .text-gray-600,
+        .dark .text-gray-700,
+        .dark .text-gray-800 {
+            color: #d1d5db;
+        }
+
+        .dark .gradient-text {
+            background: linear-gradient(90deg, #b8c1ec, #a5b4fc, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Stats section specific styling for dark mode */
+        .dark .p-6 .text-gray-500,
+        .dark .p-6 .text-indigo-500 {
+            color: #ffffff !important;
+        }
+
+        .text-gray-600 {
+            color: #555;
+        }
+        .text-gray-700 {
+            color: #444;
+        }
+        .text-gray-800 {
+            color: #333;
+        }
+
+        .dark .text-indigo-500 {
+            color: #8b9eff;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        .glow-card {
+            background-color: var(--card-bg);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #5e72e4, #825ee4, #a84ee4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .glow-card {
+            box-shadow: 0 0 15px rgba(94, 114, 228, 0.1);
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .dark .glow-card {
+            background-color: var(--card-bg);
+            box-shadow: 0 0 15px rgba(20, 30, 70, 0.3);
+        }
+        
+        .glow-card:hover {
+            box-shadow: 0 0 25px rgba(94, 114, 228, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .therapy-particle {
+            position: absolute;
+            background: rgba(94, 114, 228, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #5e72e4;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #5e72e4 }
+        }
+
+        .therapy-icon {
+            color: #5e72e4;
+            background-color: #f0f4ff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .dark .therapy-icon {
+            color: #8b9eff;
+            background-color: rgba(22, 33, 62, 0.5);
+        }
+
+    </style>
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 md:px-6 py-8 md:py-12 max-w-6xl overflow-x-hidden">
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-8 md:mb-16 relative">
+            <button id="darkModeToggle" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-300 shadow-md hover:shadow-lg transition-all transform transition-transform duration-300" style="width: 36px; height: 36px;">
+                <i class="fas fa-moon text-sm" id="darkModeIcon"></i>
+            </button>
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 gradient-text">Uzman Psikolog</h1>
+                <h2 class="text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-6 typewriter">Ruh Sağlığında Yenilikçi Yaklaşımlar</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Uzman klinik psikolog olarak bireylerin yaşam kalitesini artırmak için bütüncül terapi yaklaşımları sunuyorum. 
+                    Danışanlarımın güçlü yönlerini keşfetmelerine ve potansiyellerini gerçekleştirmelerine yardımcı oluyorum.
+                </p>
+                <div class="flex space-x-4">
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-full font-medium text-white transition-all flex items-center justify-center">
+                            <i class="fas fa-envelope mr-2"></i> Randevu Al
+                        </a>
+                        <a href="https://www.instagram.com/arslan_psikoloji?igsh=MWFveDE5Njc1aHpobg==" class="px-6 py-3 border border-indigo-500 text-indigo-500 hover:bg-indigo-50 rounded-full font-medium transition-all flex items-center justify-center">
+                            <i class="fab fa-instagram mr-2"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-200 relative glow-card">
+                    <!-- Buraya profil fotosu koy -->
+                        <img src="assets/images/profile_photo.jpg"
+                             alt="Psikolog Portresi" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-lg">
+                        <span class="text-indigo-500 font-bold">Uzman Psikolog</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Stats Section -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-12 md:mb-16">
+            <div class="p-6 rounded-xl glow-card">
+                <h3 class="text-gray-500 text-sm mb-2">Deneyim Yılı</h3>
+                <p class="text-3xl font-bold text-indigo-500">12+</p>
+            </div>
+            <div class="p-6 rounded-xl glow-card">
+                <h3 class="text-gray-500 text-sm mb-2">Uzmanlık Alanı</h3>
+                <p class="text-3xl font-bold text-indigo-500">8+</p>
+            </div>
+            <div class="p-6 rounded-xl glow-card">
+                <h3 class="text-gray-500 text-sm mb-2">Danışan Sayısı</h3>
+                <p class="text-3xl font-bold text-indigo-500">500+</p>
+            </div>
+            <div class="p-6 rounded-xl glow-card">
+                <h3 class="text-gray-500 text-sm mb-2">Seminer</h3>
+                <p class="text-3xl font-bold text-indigo-500">25+</p>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Terapi Yaklaşımım</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-xl glow-card">
+                    <div class="therapy-icon">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Bütüncül Terapi</h3>
+                    <p class="text-gray-600">
+                        Bilişsel davranışçı terapi, şema terapi, EMDR ve mindfulness tekniklerini harmanlayarak kişiye özel tedavi planları oluşturuyorum.
+                    </p>
+                </div>
+                <div class="p-8 rounded-xl glow-card">
+                    <div class="therapy-icon">
+                        <i class="fas fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Danışan Odaklı</h3>
+                    <p class="text-gray-600">
+                        Her danışanın benzersiz olduğuna inanıyorum. Terapi sürecinde güvenli ve yargısız bir alan sunarak kişisel gelişimi destekliyorum.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timeline Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Mesleki Kariyer</h2>
+            <div class="relative max-w-3xl">
+                <div class="hidden md:block absolute left-0 h-full w-0.5 bg-gray-200"></div>
+                
+                <div class="space-y-8">
+                    <div class="relative pl-12 timeline-item">
+                        <div class="p-6 rounded-xl glow-card">
+                            <h3 class="font-bold text-lg text-indigo-500 mb-2">Klinik Psikolog</h3>
+                            <p class="text-sm text-gray-500 mb-2">2013-2017</p>
+                            <p class="text-gray-700">Psikiyatri kliniğinde danışmanlık hizmetleri</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative pl-12 timeline-item">
+                        <div class="p-6 rounded-xl glow-card">
+                            <h3 class="font-bold text-lg text-indigo-500 mb-2">Özel Muayenehane</h3>
+                            <p class="text-sm text-gray-500 mb-2">2018-Günümüz</p>
+                            <p class="text-gray-700">Bireysel ve çift terapileri uygulamaları</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Hizmetlerimiz</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl glow-card">
+                    <div class="therapy-icon mx-auto">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Bireysel Terapi</h3>
+                    <p class="text-gray-600 text-center">
+                       <!--Depresyon, kaygı bozuklukları, travma sonrası stres bozukluğu ve kişilik bozuklukları alanlarında uzmanlaşmış terapi hizmetleri -->
+                       MMPI, Noropsikolojik değerlendirmeler, kelime listesi uygulaması, WMS, sayı dizileri, yüz tanıma, çizgi yönünü belirleme, Stroop, benzerlikler, 
+                       BNT, Alexander.
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl glow-card">
+                    <div class="therapy-icon mx-auto">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Çift Terapisi</h3>
+                    <p class="text-gray-600 text-center">
+                       <!-- İlişki problemleri, iletişim sorunları ve aile içi çatışmalar için çözüm odaklı terapi yaklaşımları -->
+                          İlişki değerlendirme envanteri, iletişim ölçekleri, çatışma çözme ölçekleri, ilişki doyumu ölçekleri, çift terapisi teknikleri.
+                        Çözüm odaklı terapi, duygusal odaklı terapi (EFT), bilişsel davranışçı çift terapisi, Gottman yöntemi, imago çift terapisi,
+                         iletişim ve empati geliştirme teknikleri.
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl glow-card">
+                    <div class="therapy-icon mx-auto">
+                        <i class="fas fa-child text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Çocuk-Ergen</h3>
+                    <p class="text-gray-600 text-center">
+                        Çocuk değerlendirme paketi: Ankara Gelişim Tarama Envanteri, Peabody Resim Kelime Tanıma testi, resim çizme testleri,
+                         Bender-Gesalt görsel motor algı testi, cümle kurma testi (Beier), duygu durumu ölçekleri, Wisc-4, çocuk çizimlerinin analizleri.
+                        <!-- Dikkat eksikliği, öğrenme güçlükleri, sınav kaygısı ve davranış problemleri için oyun terapisi ve bilişsel davranışçı terapi -->
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonial Section -->
+        <section class="mb-16">
+  <h2 class="text-3xl font-bold mb-8 gradient-text text-center">Danışan Yorumları</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Yorum 1 -->
+    <div class="p-6 rounded-xl glow-card">
+      <div class="flex items-center mb-4">
+        <!-- Baş Harf Avatarı -->
+        <div class="w-12 h-12 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center mr-4 text-lg uppercase">
+          V
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800">Volkan K.</h4>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 italic">
+        "Eşim ile şiddetli geçimsizlik problemimiz vardı. Ramazan hocama teşekkürler eşim ile çok daha mutluyuz."
+      </p>
+    </div>
+
+    <!-- Yorum 2 -->
+    <div class="p-6 rounded-xl glow-card">
+      <div class="flex items-center mb-4">
+        <!-- Baş Harf Avatarı -->
+        <div class="w-12 h-12 rounded-full bg-green-600 text-white font-bold flex items-center justify-center mr-4 text-lg uppercase">
+          M
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-800">Sultan Orhan</h4>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text-gray-600 italic">
+        "Ramazan Bey alanında oldukça yetkin ve profesyonel biri. Yaklaşık 2 aydır devam eden sürecimizle birlikte hayatımda birçok olumlu dönütler aldım. Sayesinde yoğun kaygılarım artık kontrol altında.
+         Ondan hizmet almayı gönül rahatlığıyla tavsiye ediyorum."
+      </p>
+    </div>
+  </div>
+</section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="text-3xl font-bold mb-8 gradient-text text-center">İletişim</h2>
+            <div class="p-8 rounded-xl glow-card max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">İletişim Bilgileri</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-indigo-500 mt-1 mr-3"></i>
+                                <p class="text-gray-600">Prof. Kamil Miras Cad. No:8 2A/A (VatanBilgisayar arkası)<br>Afyonkarahisar/Merkez</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-indigo-500 mr-3"></i>
+                                <p class="text-gray-600">0 (506) 257 45 72</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-indigo-500 mr-3"></i>
+                                <p class="text-gray-600">E-posta adresi eklenecek</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Çalışma Saatleri</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600"><b>Pazartesi-Cumartesi</b></span>
+                                <span class="text-gray-800 font-medium">00:00 - 00:00</span>
+                            </div>
+                            <div class="text-gray-500 font-italic">(24 Saat)</div>
+                        <!--
+                            <div class="flex justify-between">
+                                <span class="text-gray-600"><b>Cumartesi</b></span>
+                                <span class="text-gray-800 font-medium">00:00 - :00</span>
+                            </div>
+                        -->   
+                            <div class="flex justify-between">
+                                <span class="text-gray-600"><b>Pazar</b></span>
+                                <span class="text-gray-800 font-medium">Kapalı</span>
+                            </div>
+                            <div class="text-gray-500 font-italic">(*Çalışma saatleri farklılık gösterebilir)</div>
+                        </div>
+                    </div>
+                </div>
+                <form onsubmit="sendWhatsAppMessage(event)">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-600 mb-2">Ad Soyad</label>
+                            <input type="text" id="name" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-600 mb-2">E-posta</label>
+                            <input type="email" id="email" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-600 mb-2">Konu</label>
+                        <input type="text" id="subject" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-600 mb-2">Mesajınız</label>
+                        <textarea id="message" rows="4" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg transition-all flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Mesaj Gönder
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script>
+        function sendWhatsAppMessage(event){
+            event.preventDefault();
+            const name =
+        document.getElementById('name').value.trim();
+            const email =
+        document.getElementById('email').value.trim();
+            const subject =
+        document.getElementById('subject').value.trim();
+            const message =
+        document.getElementById('message').value.trim(); 
+        
+        //numarayı ekle//
+            const phone = "905062574572"; // WhatsApp numarası (ülke kodu ile birlikte)
+            const text =  `Yeni mesaj:%0AAd: ${name}%0AEmail: ${email}%0AKonu: ${subject}%0AMesaj: ${message}`;
+            const url = `https://wa.me/${phone}?text=${text}`;
+                    window.open(url, '_blank');
+        }
+    </script>
+    <!-- Footer -->
+    <footer class="bg-indigo-50 py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/arslan_psikoloji?igsh=MWFveDE5Njc1aHpobg==" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2025 Uzman Psikolog Ramazan Arslan. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-4 right-4 z-50 p-2 rounded-full bg-indigo-500 text-white shadow-md hover:bg-indigo-600 transition-all opacity-0 invisible" style="width: 36px; height: 36px;">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+    
+    <script>
+        // Create therapy particles
+        const particlesContainer = document.getElementById('particles-container');
+        const numParticles = 30;
+        
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('therapy-particle');
+            
+            // Random size between 3 and 8px (much smaller)
+            const size = Math.random() * 8 + 3;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random position
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            
+            // Random opacity (much more subtle)
+            particle.style.opacity = Math.random() * 0.15 + 0.05;
+            
+            particlesContainer.appendChild(particle);
+            
+            // Animate particles
+            animateParticle(particle);
+        }
+        
+        function animateParticle(particle) {
+            let x = parseFloat(particle.style.left);
+            let y = parseFloat(particle.style.top);
+            let xSpeed = (Math.random() - 0.5) * 0.2;
+            let ySpeed = (Math.random() - 0.5) * 0.2;
+            
+            function move() {
+                x += xSpeed;
+                y += ySpeed;
+                
+                // Bounce off edges
+                if (x <= 0 || x >= 100) xSpeed *= -1;
+                if (y <= 0 || y >= 100) ySpeed *= -1;
+                
+                particle.style.left = `${x}%`;
+                particle.style.top = `${y}%`;
+                
+                requestAnimationFrame(move);
+            }
+            
+            move();
+        }
+        
+        // Hide/show dark mode button on scroll
+        let lastScrollTop = 0;
+        const darkModeBtn = document.getElementById('darkModeToggle');
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                darkModeBtn.style.transform = 'translateY(-50px)';
+            } else {
+                // Scrolling up
+                darkModeBtn.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+        
+        // Add animation to timeline items when they come into view
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Check local storage - default to light mode
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark');
+            darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+            
+            if (isDark) {
+                darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                darkModeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
